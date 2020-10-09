@@ -94,9 +94,9 @@ RUN apk --no-cache add \
     && rm -rf /var/cache/apk/*
 
 # Add python env
-RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python \
-        python3 -m ensurepip \
-        pip3 install --no-cache --upgrade pip setuptools
+# RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python \
+#         python3 -m ensurepip \
+#         pip3 install --no-cache --upgrade pip setuptools
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
