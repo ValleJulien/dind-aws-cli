@@ -93,6 +93,7 @@ RUN apk --no-cache add \
     && rm glibc-bin-2.31-r0.apk \
     && rm -rf /var/cache/apk/*
 
+# Add python env
 RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python \
         python3 -m ensurepip \
         pip3 install --no-cache --upgrade pip setuptools
